@@ -4,5 +4,6 @@ uvicorn[standard]
 aiofiles
 python-multipart
 docker
+pydantic-settings
 pydantic
 
