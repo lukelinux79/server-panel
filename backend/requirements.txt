@@ -1,0 +1,8 @@
+# Backend requirements
+fastapi
+uvicorn[standard]
+aiofiles
+python-multipart
+docker
+pydantic
+

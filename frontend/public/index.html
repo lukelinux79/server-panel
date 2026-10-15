@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>server-panel (placeholder)</title>
+    <style>
+      body{font-family:system-ui,Arial;margin:2rem}
+      pre{background:#f6f8fa;padding:1rem}
+    </style>
+  </head>
+  <body>
+    <h1>server-panel — Frontend placeholder</h1>
+    <p>This is a minimal UI to test the backend API.</p>
+
+    <button id="btn-list">List Samba Shares</button>
+    <pre id="out">Output will appear here</pre>
+
+    <script>
+      document.getElementById('btn-list').addEventListener('click', async ()=>{
+        const res = await fetch('/api/samba/shares');
+        const json = await res.json();
+        document.getElementById('out').textContent = JSON.stringify(json, null, 2);
+      })
+    </script>
+  </body>
+</html>
